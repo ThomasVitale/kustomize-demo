@@ -1,2 +1,2 @@
 server:
-    shutdown: immediate
+    shutdown: graceful
