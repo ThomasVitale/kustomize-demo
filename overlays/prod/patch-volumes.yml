@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: band-service
+spec:
+  template:
+    spec:
+      containers:
+        - name: band-service
+          volumeMounts:
+            - name: band-config-volume
+              mountPath: /workspace/config
+      volumes:
+        - name: band-config-volume
+          configMap:
+            name: band-config
